@@ -1,0 +1,222 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+\usepackage{hipstercv}
+
+% Farben
+\definecolor{headerblue}{HTML}{2EB6E1}%
+\definecolor{cvorange}{HTML}{FFC300}
+\definecolor{cvpurple}{HTML}{B32EE1}
+
+\definecolor{cvred}{HTML}{E1592E}
+\definecolor{cvgreen}{HTML}{5DE12E}
+
+
+% TIMELINE
+\definecolor{timelinecolour}{HTML}{414B96} %#660022
+\definecolor{jackbeige}{RGB}{226,212,186} 
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.3\textwidth}
+\setlength{\rightcolwidth}{0.65\textwidth}
+
+%------------------------------------------------------------------
+\title{Hipster-CV}
+\author{\LaTeX{} Ninja}
+\date{March 2019}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+
+
+\header{\bg{black}{white}{Captain} }{\bgupper{black}{white}{\bfseries\Huge Jack Sparrow}}{\bg{black}{white}{\large Pirate}}{jack.jpg}{headerblue}{3.5cm}{2cm}
+
+
+
+%------------------------------------------------
+
+% hier muss die "unsichtbare" Überschrift rein, weil er sonst nicht die Paracols startet... komisch...
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.3}[0.65]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\backgroundcolor{c[0](4pt,4pt)(0.5\columnsep,4pt)}[rgb]{0.25,0.25,0.25}
+\backgroundcolor{c[1](0.5\columnsep,4pt)(4pt,4pt)}[rgb]{1,1,1}
+\backgroundcolor{C[0](10000pt,10000pt)(0.5\columnsep,10000pt)}[rgb]{0.25,0.25,0.25}
+\backgroundcolor{C[1](0.5\columnsep,10000pt)(10000pt,10000pt)}[rgb]{1,1,1}
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\color{white}
+\bgupper{cvgreen}{white}{Facts} \\
+\bg{cvgreen}{white}{personal} \\
+
+\begin{tabular}{ll}
+\faMale&Jack Sparrow \\
+\faGlobe& nationality: English  \\
+\faBirthdayCake&1690 \\
+\faMapMarker&on a ship \\
+\end{tabular}
+
+\bigskip
+
+\bg{cvgreen}{white}{Areas of specialization} \\
+
+Privateering • Bucaneering • Parler
+
+\bigskip
+
+\bgupper{cvgreen}{white}{Skills} \\
+\bg{cvgreen}{white}{Languages}
+\bigskip
+
+
+\begin{minipage}[t]{\leftcolwidth}
+\begin{tabular}{l | ll}
+\textbf{English} & C2 & {\phantom{x}\footnotesize mother tongue} \\
+\textbf{French} & C2 & \pictofraction{\faCircle}{cvpurple}{3}{black!30}{1}{\tiny}
+\end{tabular}
+\end{minipage}
+
+\bigskip
+
+\bg{cvgreen}{white}{Interests}\\
+
+\bubblediagram{{\textbf{a pirate's} \\\textbf{life}},  the sea, pillaging, plundering, ships, stealing, hijacking, \textbf{The Black}\\ \textbf{Pearl}}
+
+\hspace{3cm} \color{white}{OS:} \hspace{0.5em}\icon{\faWindows}{white}{\Large} \hspace{0.5em} \icon{\faLinux}{white}{\Large} 
+\bigskip
+
+\bg{cvgreen}{white}{IT \& programming} \\
+
+\begin{minipage}[t]{0.3\textwidth}
+\begin{tabular}{r @{\hspace{0.5em}}l}
+     \bg{black!30}{black}{html, css} &  \barrule{0.4}{0.5em}{cvpurple}\\
+     \bg{black!30}{black}{\LaTeX} & \barrule{0.55}{0.5em}{cvgreen} \\
+     \bg{black!30}{black}{xslt} & \barrule{0.5}{0.5em}{cvpurple} \\
+     \bg{black!30}{black}{python} & \barrule{0.5}{0.5em}{cvpurple} \\
+     \bg{black!30}{black}{R} & \barrule{0.25}{0.5em}{cvpurple} \\
+     \bg{black!30}{black}{javascript} & \barrule{0.1}{0.5em}{cvpurple} \\
+\end{tabular}
+
+
+%\dashrule{}{}
+\end{minipage}
+
+
+\bigskip
+
+\scalebox{0.8}{
+\iconcross{\Huge}{white}{cvred}{\color{black!30}\faBook}{\href{mailto:the.latex.ninja@gmail.com}{\faEnvelopeO}}{\faPhone}{\faCode}
+}
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{Short Resumé}
+
+\begin{tabular}{r| p{0.4\textwidth} c}
+    \cvevent{2018--2021}{Captain of the Black Pearl}{Lead}{East Indies \color{cvred}}{Finally got the goddamn ship back.}{disney.png} \\
+    \cvevent{2019}{Freelance Pirate}{Bucaneering}{Tortuga \color{cvred}}{This and that. The usual, aye?}{medal.jpeg} \\
+    \cvevent{2016--2017}{Captain of the Black Pearl}{Lead}{Tortuga \color{cvred}}{Found a secret treasure, lost the ship.}{medal.jpeg}
+\end{tabular}
+
+\vspace{4em}
+
+\begin{minipage}[t]{0.4\textwidth}
+\section*{Degrees}
+\begin{tabular}{r p{0.6\textwidth} c}
+    \cvdegree{1710}{Captain}{Certified}{Tortuga Uni \color{headerblue}}{}{disney.png} \\
+    \cvdegree{1715}{Bucaneering}{M.A.}{London \color{headerblue}}{}{medal.jpeg} \\
+    \cvdegree{1720}{Bucaneering}{B.A.}{London \color{headerblue}}{}{medal.jpeg}
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.16\textwidth}
+\section*{Hobbies}
+% usage \hobbyicon{<fontawesome icon}{Text}{background color of circle}{size of icon}{space text below icon}
+\hobbyicon{\faFlask}{Rhum}{cvgreen}{\huge}{2em} \hfill
+\hobbyicon{\faBook}{The Code}{cvpurple}{\huge}{2em}
+
+\hobbyicon{\faComment}{Parler}{cvred}{\huge}{2em} \hspace{1em}
+\hobbyicon{\faBeer}{Beer}{headerblue}{\huge}{2em}
+\end{minipage}
+
+\vspace{4em}
+
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Certificates \& Grants}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
+    1708 & Captain's Certificates \\
+    1710 & Travel grant \\
+    1715--1716 & Grant from the Pirate's Company
+\end{tabular}
+\section*{Strenghts}
+\cvtag{honest}
+\cvtag{thieving}
+\cvtag{handsome}
+\section*{References}
+\cvkeyword{Will Turner}{cvgreen}{black}
+\cvkeyword{Barbossa}{cvgreen}{black} \\
+
+\cvkeyword{possibly Mr. Swan}{headerblue}{black}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Publications}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+    1729 & \emph{How I almost got killed by Lady Swan}, Tortuga Printing Press. \\
+    1720 & ``Privateering for Beginners'', in: \emph{The Pragmatic Pirate} (1/1720).
+\end{tabular}
+\section*{Talks}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.6\textwidth}}
+    Nov. 1726 & ``How I lost my ship (\& and how to get it back)'', at: \emph{Annual Pirate's Conference} in Tortuga, Nov. 1726.
+\end{tabular}
+\end{minipage}
+
+
+
+
+
+
+
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small Jack Sparrow \icon{\faEnvelopeO}{cvpurple}{} The Black Pearl \icon{\faMapMarker}{cvpurple}{} Tortuga \icon{\faPhone}{cvpurple}{} 0099/333 5647380 \newline\icon{\faAt}{cvpurple}{} \protect\url{jack@sparrow.com}
+}
+\end{center}
+\end{minipage}
+
+
+\end{paracol}
+
+\end{document}
