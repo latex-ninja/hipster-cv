@@ -11,7 +11,7 @@ Please replace them with your own photos and logos if you use this template!
 
 <table width="100%" margin-left="auto" margin-right="auto">
 	<tr>
-		<th>Classic: `darkhipster` and `lighthipster`</th>
+		<th>Classic: <code>darkhipster</code> and <code>lighthipster</code></th>
 	</tr>
 	<tr>
 		<td>
@@ -24,7 +24,7 @@ Please replace them with your own photos and logos if you use this template!
 
 <table width="100%" margin-left="auto" margin-right="auto">
 	<tr>
-		<th>Pastels: `pastel` and `verylight`</th>
+		<th>Pastels: <code>pastel</code> and <code>verylight</code></th>
 	</tr>
 	<tr>
 		<td>
