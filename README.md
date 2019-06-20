@@ -37,7 +37,7 @@ Please replace them with your own photos and logos if you use this template!
 
 <table width="100%" margin-left="auto" margin-right="auto">
 	<tr>
-		<th>Dark versions: `allblack` and `grey`</th>
+		<th>Dark versions: <code>grey</code> and <code>allblack</code></th>
 	</tr>
 	<tr>
 		<td>
@@ -58,8 +58,9 @@ This is how to invoke the different colour themes
 % available are: verylight, pastel, alldark, grey, darkhipster, lighthipster
 ```
 
-## See also the Simple Academic CV
+### See also the Simple Academic CV
 ![Simple Academic CV](https://github.com/latex-ninja/hipster-cv/blob/master/previews/academic-cvs.png)
+[Get it here.](https://github.com/latex-ninja/simple-academic-resume)
 
 
 ## License
