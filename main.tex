@@ -1,21 +1,9 @@
-\documentclass{article}
+\documentclass[grey]{hipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey
 \usepackage[utf8]{inputenc}
 \usepackage[default]{raleway}
 \usepackage[margin=1cm, a4paper]{geometry}
-\usepackage{hipstercv}
 
-% Farben
-\definecolor{headerblue}{HTML}{2EB6E1}%
-\definecolor{cvorange}{HTML}{FFC300}
-\definecolor{cvpurple}{HTML}{B32EE1}
-
-\definecolor{cvred}{HTML}{E1592E}
-\definecolor{cvgreen}{HTML}{5DE12E}
-
-
-% TIMELINE
-\definecolor{timelinecolour}{HTML}{414B96} %#660022
-\definecolor{jackbeige}{RGB}{226,212,186} 
 
 %------------------------------------------------------------------ Variablen
 
@@ -40,7 +28,7 @@
 
 
 
-\header{\bg{black}{white}{Captain} }{\bgupper{black}{white}{\bfseries\Huge Jack Sparrow}}{\bg{black}{white}{\large Pirate}}{jack.jpg}{headerblue}{3.5cm}{2cm}
+\header{\bg{headerfontbox}{headerfontboxfont}{Captain} }{\bgupper{headerfontbox}{headerfontboxfont}{\bfseries\Huge Jack Sparrow}}{\bg{headerfontbox}{headerfontboxfont}{\large Pirate}}{jack.jpg}{headerblue}{3.5cm}{2cm}
 
 
 
@@ -56,16 +44,13 @@
 \hbadness5000
 %\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
 
-\backgroundcolor{c[0](4pt,4pt)(0.5\columnsep,4pt)}[rgb]{0.25,0.25,0.25}
-\backgroundcolor{c[1](0.5\columnsep,4pt)(4pt,4pt)}[rgb]{1,1,1}
-\backgroundcolor{C[0](10000pt,10000pt)(0.5\columnsep,10000pt)}[rgb]{0.25,0.25,0.25}
-\backgroundcolor{C[1](0.5\columnsep,10000pt)(10000pt,10000pt)}[rgb]{1,1,1}
+\paracolbackgroundoptions
 
 % 0.9,0.9,0.9 -- 0.8,0.8,0.8
 
 
 \footnotesize
-{\color{white}
+{\setasidefontcolour
 \bgupper{cvgreen}{white}{Facts} \\
 \bg{cvgreen}{white}{personal} \\
 
@@ -80,7 +65,7 @@
 
 \bg{cvgreen}{white}{Areas of specialization} \\
 
-Privateering • Bucaneering • Parler
+Privateering ~•~ Bucaneering ~•~ Parler
 
 \bigskip
 
@@ -102,19 +87,19 @@ Privateering • Bucaneering • Parler
 
 \bubblediagram{{\textbf{a pirate's} \\\textbf{life}},  the sea, pillaging, plundering, ships, stealing, hijacking, \textbf{The Black}\\ \textbf{Pearl}}
 
-\hspace{3cm} \color{white}{OS:} \hspace{0.5em}\icon{\faWindows}{white}{\Large} \hspace{0.5em} \icon{\faLinux}{white}{\Large} 
+\hspace{3cm} \color{labelcolour}{OS:} \hspace{0.5em}\icon{\faWindows}{labelcolour}{\Large} \hspace{0.5em} \icon{\faLinux}{labelcolour}{\Large} 
 \bigskip
 
 \bg{cvgreen}{white}{IT \& programming} \\
 
 \begin{minipage}[t]{0.3\textwidth}
 \begin{tabular}{r @{\hspace{0.5em}}l}
-     \bg{black!30}{black}{html, css} &  \barrule{0.4}{0.5em}{cvpurple}\\
-     \bg{black!30}{black}{\LaTeX} & \barrule{0.55}{0.5em}{cvgreen} \\
-     \bg{black!30}{black}{xslt} & \barrule{0.5}{0.5em}{cvpurple} \\
-     \bg{black!30}{black}{python} & \barrule{0.5}{0.5em}{cvpurple} \\
-     \bg{black!30}{black}{R} & \barrule{0.25}{0.5em}{cvpurple} \\
-     \bg{black!30}{black}{javascript} & \barrule{0.1}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{html, css} &  \barrule{0.4}{0.5em}{cvpurple}\\
+     \bg{skilllabelcolour}{iconcolour}{\LaTeX} & \barrule{0.55}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{xslt} & \barrule{0.5}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{python} & \barrule{0.5}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{R} & \barrule{0.25}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{javascript} & \barrule{0.1}{0.5em}{cvpurple} \\
 \end{tabular}
 
 
@@ -157,11 +142,11 @@ Privateering • Bucaneering • Parler
 \begin{minipage}[t]{0.16\textwidth}
 \section*{Hobbies}
 % usage \hobbyicon{<fontawesome icon}{Text}{background color of circle}{size of icon}{space text below icon}
-\hobbyicon{\faFlask}{Rhum}{cvgreen}{\huge}{2em} \hfill
-\hobbyicon{\faBook}{The Code}{cvpurple}{\huge}{2em}
+\hobbyicon{\color{iconcolour}\faFlask}{Rhum}{cvgreen}{\iconsize}{2em} \hfill
+\hobbyicon{\color{iconcolour}\faBook}{The Code}{cvorange}{\iconsize}{2em}
 
-\hobbyicon{\faComment}{Parler}{cvred}{\huge}{2em} \hspace{1em}
-\hobbyicon{\faBeer}{Beer}{headerblue}{\huge}{2em}
+\hobbyicon{\color{iconcolour}\faComment}{Parler}{cvpurple}{\iconsize}{2em} \hspace{1em}
+\hobbyicon{\color{iconcolour}\faBeer}{Beer}{headerblue}{\iconsize}{2em}
 \end{minipage}
 
 \vspace{4em}
@@ -178,10 +163,10 @@ Privateering • Bucaneering • Parler
 \cvtag{thieving}
 \cvtag{handsome}
 \section*{References}
-\cvkeyword{Will Turner}{cvgreen}{black}
-\cvkeyword{Barbossa}{cvgreen}{black} \\
+\cvkeyword{Will Turner}{cvgreen}{iconcolour}
+\cvkeyword{Barbossa}{cvgreen}{iconcolour} \\
 
-\cvkeyword{possibly Mr. Swan}{headerblue}{black}
+\cvkeyword{possibly Mr. Swan}{headerblue}{iconcolour}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.3\textwidth}
 \section*{Publications}
