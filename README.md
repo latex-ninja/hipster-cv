@@ -24,7 +24,7 @@ Please replace them with your own photos and logos if you use this template!
 
 <table width="100%" margin-left="auto" margin-right="auto">
 	<tr>
-		<th>Pastels: <code>pastel</code> and <code>verylight</code></th>
+		<th>Pastels: <code>verylight</code> and <code>pastel</code></th>
 	</tr>
 	<tr>
 		<td>
