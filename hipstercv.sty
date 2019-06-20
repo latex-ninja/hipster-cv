@@ -1,3 +1,4 @@
+
 \usepackage[T1]{fontenc}
 
 \usepackage{fontawesome}
@@ -28,13 +29,13 @@
 \usetikzlibrary{patterns} % horizontal lines, vertical lines, north east lines, north west lines, grid, crosshatch, dots, crosshatch dots, fivepointed stars, sixpointed stars, bricks
 \usetikzlibrary{shapes} 
 \usetikzlibrary{shapes.geometric}
-\usetikzlibrary{snakes}
+\usetikzlibrary{decorations}
 \usetikzlibrary{topaths}
 
 \usepackage{graphicx}
-\usepackage[usenames, dvipsnames]{color} 
+%\usepackage[usenames, dvipsnames]{color} 
 % https://de.sharelatex.com/learn/Using_colours_in_LaTeX#!#Reference_guide z.B. \color{RubineRed}
-\usepackage{xcolor}
+%\usepackage{xcolor}
 
 
 % avoid line overflow
@@ -73,23 +74,11 @@
 }
  
 
-
+\usepackage{smartdiagram}
 %-----------------------------------------------------
 % set smartdiagram colours, from: https://github.com/Johayon/Data-Scientist-Resume-LaTeX/blob/master/twentysecondcv.cls
 
-%-------------------------------------------------------
-\definecolor{materialpurple}{HTML}{9C27B0}
-\definecolor{materialindigo}{HTML}{3F51B5}
-\definecolor{materialblue}{HTML}{2196F3}
-\definecolor{materialcyan}{HTML}{00BCD4}
-\definecolor{materialteal}{HTML}{009688}
-\definecolor{materialgreen}{HTML}{4CAF50}
-\definecolor{materiallime}{HTML}{CDDC39}
-\definecolor{materialamber}{HTML}{FFC107}
-\definecolor{materialbrown}{HTML}{795548}
-\definecolor{materialred}{HTML}{FF4436}
-\definecolor{materialorange}{HTML}{FF5722}
-\definecolor{pblue}{HTML}{0395DE}
+
 %-------------------------------------------------------
 \smartdiagramset{
     bubble center node font = \footnotesize,
@@ -183,12 +172,12 @@
 
 %---------------------------------------------------------
 \newcommand{\barrule}[3]{\hspace{0.5em}
-{\color{#3}\rule[0em\baselineskip]{#1\textwidth}{#2}}\vspace{0.5em}
+{\color{#3}\rule[\baselineskip]{#1\textwidth}{#2}}\vspace{0.5em}
 }
 
-\newcommand{\cvevent}[6]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ {#4 \faMapMarker}\newline{\color{black!70}\footnotesize #5}\vspace{1.5em} & \raisebox{-0.7\height}{\includegraphics[height=1cm]{#6}}}
+\newcommand{\cvevent}[6]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ {#4 ~\faMapMarker}\newline{\color{black!70}\footnotesize #5}\vspace{1.5em} & \raisebox{-0.7\height}{\includegraphics[height=1cm]{#6}}}
 
-\newcommand{\cvdegree}[6]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ {#4 {\phantom{i}\footnotesize \faUniversity}}\newline{\color{black!70}\scriptsize #5}\vspace{0.5em} & \raisebox{-0.7\height}{\includegraphics[height=0.5cm]{#6}}}
+\newcommand{\cvdegree}[6]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ {#4 {\phantom{i}\footnotesize ~\faUniversity}}\newline{\color{black!70}\scriptsize #5}\vspace{0.5em} & \raisebox{-0.7\height}{\includegraphics[height=0.5cm]{#6}}}
 
 
 
@@ -203,9 +192,11 @@
 \tikz[remember picture,overlay] {%
 \node[rectangle, fill=#5, anchor=north, minimum width=\paperwidth, minimum height=5cm](header) at (current page.north){};%
 \node[left=#7 of header.north, anchor=east](name) at (header.east) {\fontfamily{\sfdefault}\selectfont #2};%
-\node[anchor=south east](degree) at (name.north east) {\fontfamily{\sfdefault}\selectfont\flushright #1};%
+\node[anchor=south east](degree) at (name.north east) {\fontfamily{\sfdefault}\selectfont #1};%
 \node[anchor=north east](descr) at (name.south east) {\fontfamily{\sfdefault}\selectfont #3};%
 \node[right=#6 of header.west, anchor=west](picture) at (header.west) {};%
 \draw[path picture={\node[anchor=center] at (path picture bounding box.center){\includegraphics[height=4.3cm]{#4}} ;}] (picture) circle (2) ;}%
 \vspace{1.5cm}%
 }
+
+
