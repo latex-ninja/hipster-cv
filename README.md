@@ -60,7 +60,10 @@ This is how to invoke the different colour themes
 
 ### See also the Simple Academic CV
 ![Simple Academic CV](https://github.com/latex-ninja/hipster-cv/blob/master/previews/academic-cvs.png)
+![Simple Academic CV - Version 2](https://github.com/latex-ninja/simple-academic-resume/blob/master/simple-acad-cv.png)
 [Get it here.](https://github.com/latex-ninja/simple-academic-resume)
+
+
 
 
 ## License
